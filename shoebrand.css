@@ -1,0 +1,274 @@
+.more-info img{
+    width:100%; 
+    object-fit:cover;
+    height:11em
+}
+.more-info .title{
+    font-weight: bold;
+}
+
+body{
+    margin:1.5em;
+    font-family: 'Poppins'; 
+}
+
+a {
+    text-decoration:none;
+    font-size: 1.3rem;
+}
+.down-arrow{
+    animation: downArrow 1s alternate-reverse infinite; 
+}
+.hero-img{
+    position:absolute;
+    top:0;
+    left:0;
+    background:url('shoe 1.jpg');
+    background-size:cover;
+    background-position-x: 20%;
+    background-position-y: 20%; 
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    animation: moveDown 1s ease-in-out forwards;
+}
+section.hero{
+    animation: moveDown 1s ease-in-out forwards;
+    opacity:0;
+}
+
+.logo{
+    color:black;
+    font-weight: bold;
+}
+
+header{
+    display:flex; 
+    justify-content: space-between;
+}
+
+
+#main-content p{
+    font : 0.9em/1.3em "poppins";
+}
+
+svg.close{
+    width:2.5em;
+    float:right;
+    margin:2em;
+}
+
+nav{
+    margin-top:-2px;
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    background-color:white;
+    width:50%;
+    text-transform:uppercase;
+    transform:translateX(100%);
+    transition:transform 1s ease;
+    z-index: 999;
+}
+nav ul{
+    font-weight: bold;
+    list-style-type: none;
+    padding:0;
+    margin-top:8rem;
+}
+nav ul a{
+    display:block;
+    padding: 0.75em 2em;
+    color:black;
+}
+nav ul a:hover{
+   background-color:rgb(230, 230, 230);
+}
+svg{
+    cursor:pointer;
+}
+
+section.hero{
+    margin-bottom:25em;
+}
+
+h1{
+    font-size:3em;
+    margin-top:2em;
+    line-height:3.3rem;
+}
+.subhead{
+    font: size 1.4rem;
+}
+
+.menu{
+    width:3em;
+}
+
+.open-nav{
+    transform: translateX(0%);
+}
+
+
+
+
+@media screen and (max-width:550px){
+    .hero{
+    margin:2em;
+    stroke:black;
+}
+section.hero  {
+    margin:0;
+}
+body{
+    margin:1.5em 5em;
+}
+
+}
+
+
+@media screen and (min-width:620px){
+        .hero{
+        margin:2em;
+        stroke:black;
+    }
+    section.hero  {
+        margin:0;
+    }
+    body{
+        margin:1.5em 5em;
+    }
+
+}
+
+@media screen and (min-width:920px){
+    .hero{
+    margin:2em;
+    stroke:black;
+}
+
+.menu{
+    display:none;
+}
+section.hero  {
+    margin-bottom:25em;
+}
+nav{
+    transform:translateX(0);
+    position:unset;
+    width:auto;
+    height:auto;
+    background:none;
+    margin-top:-9.3em;
+}
+svg.close{
+    display:none;
+}
+ul{
+    display:flex;
+}
+nav ul li {
+    padding:0.5em 1.5em;
+}
+nav ul a:hover{
+    background-color: unset;
+    text-decoration: underline;
+}
+.hero-img{
+    left:unset;
+    right:0;
+    width:50%;
+    height:42em;
+} 
+span{
+    color:red;
+}
+section.hero{
+    height:auto;
+    width:40%;
+    margin-bottom:8em;
+}
+.feature-first, .feature{
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap:3em;
+    margin-bottom:8em;
+}
+.feature-first{
+    margin-top:11em;
+}
+.more-info img{
+    width:25em;
+}
+.content{
+    text-align:right;
+    width:25em;
+}
+.feature{
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+}
+.feature.left{
+    grid-template-areas: "right left";
+}
+.shoe-3{
+    grid-area:right;
+}
+.feature,.content{
+    text-align:left;
+    justify-self: left;
+}
+
+}
+.open-nav{
+    transition:transformX(0%)
+}
+
+@media screen and (min-width:1200px){
+    .wrapper{
+        margin: 0 4em;
+    }
+
+}
+@media screen and (max-width:480px){
+    body{
+        padding:0 .2em;
+        margin:0;
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+    .feature.content{
+        width:100%
+    }
+    
+}
+
+@keyframes introLoads{
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+    }
+}
+
+@keyframes downArrow{
+    from {
+        transform: translateY(-30px)
+    }
+    to{
+        transform: translateX(0)
+    }
+}
+
+@keyframes moveDown{
+    from {
+        transform: translateY(-100px)
+    }
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+   
+}
